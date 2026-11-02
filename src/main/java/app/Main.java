@@ -2,6 +2,8 @@ package app;
 
 import cardapio.Lanche;
 import pedido.Pedido;
+import cardapio.LancheFactory;
+
 
 public class Main {
 
@@ -31,7 +33,7 @@ public class Main {
                     if (opcaoLanche == 1) {
 
                         pedido.adicionarItem(
-                                new Lanche("X-Burger", 16.0)
+                                LancheFactory.xBurger()
                         );
 
                     }
@@ -39,7 +41,7 @@ public class Main {
                     else if (opcaoLanche == 2) {
 
                         pedido.adicionarItem(
-                                new Lanche("X-Salada", 18.0)
+                                LancheFactory.xSalada()
                         );
 
                     }
@@ -47,7 +49,7 @@ public class Main {
                     else if (opcaoLanche == 3) {
 
                         pedido.adicionarItem(
-                                new Lanche("X-Bacon", 22.0)
+                                LancheFactory.xBacon()
                         );
 
                     }
