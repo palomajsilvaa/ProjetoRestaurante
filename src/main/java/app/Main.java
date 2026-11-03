@@ -51,6 +51,25 @@ public class Main {
                         lanche = LancheFactory.xBacon();
 
                     }
+
+                    if (lanche instanceof Lanche l) {
+
+                        if (menu.retirarQueijo()) {
+                            l.setQueijo(false);
+                        }
+
+                        if (menu.retirarAlface()) {
+                            l.setAlface(false);
+                        }
+
+                        if (menu.retirarTomate()) {
+                            l.setTomate(false);
+                        }
+
+                        if (menu.retirarCebola()) {
+                            l.setCebola(false);
+                        }
+                    }
                     boolean cheddar = menu.desejaCheddar();
 
                     boolean baconExtra = menu.desejaBaconExtra();

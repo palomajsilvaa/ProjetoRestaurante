@@ -81,4 +81,33 @@ public class MenuConsole {
 
         return resposta.equalsIgnoreCase("s");
     }
+
+    public boolean retirarQueijo() {
+
+        System.out.print("Retirar queijo? (s/n): ");
+
+        return sc.nextLine().equalsIgnoreCase("s");
+    }
+
+    public boolean retirarAlface() {
+
+        System.out.print("Retirar alface? (s/n): ");
+
+        return sc.nextLine().equalsIgnoreCase("s");
+    }
+    public boolean retirarTomate() {
+
+        System.out.print("Retirar tomate? (s/n): ");
+
+        return sc.nextLine().equalsIgnoreCase("s");
+    }
+
+    public boolean retirarCebola() {
+
+        System.out.print("Retirar cebola? (s/n): ");
+
+        return sc.nextLine().equalsIgnoreCase("s");
+    }
+
+
 }
