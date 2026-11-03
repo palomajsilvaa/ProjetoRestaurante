@@ -12,6 +12,7 @@ public class MenuConsole {
         System.out.println("1 - Registrar novo pedido");
         System.out.println("2 - Listar pedidos do dia");
         System.out.println("3 - Fechar restaurante");
+        System.out.println("4 - Cancelar pedido");
         System.out.println("0 - Sair");
         System.out.print("Escolha: ");
     }
@@ -109,5 +110,12 @@ public class MenuConsole {
         return sc.nextLine().equalsIgnoreCase("s");
     }
 
+    public int lerNumeroPedido() {
+
+        System.out.print("Número do pedido: ");
+
+        return sc.nextInt();
+
+    }
 
 }

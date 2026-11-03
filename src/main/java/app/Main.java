@@ -136,6 +136,16 @@ public class Main {
 
                     break;
 
+                case 4:
+
+                    int numeroPedido = menu.lerNumeroPedido();
+
+                    sistema.cancelarPedido(numeroPedido);
+
+                    System.out.println("Pedido cancelado.");
+
+                    break;
+
                 case 0:
 
                     System.out.println("Encerrando sistema...");

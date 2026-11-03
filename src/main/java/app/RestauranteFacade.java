@@ -37,5 +37,9 @@ public class RestauranteFacade {
         return gerenciador.calcularTotalDoDia();
 
     }
+    public void cancelarPedido(int numero) {
 
+        gerenciador.cancelarPedido(numero);
+
+    }
 }

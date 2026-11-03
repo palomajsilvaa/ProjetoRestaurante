@@ -43,5 +43,9 @@ public class GerenciadorPedidos {
 
         return total;
     }
+    public void cancelarPedido(int numero) {
 
+        pedidos.remove(numero);
+
+    }
 }
