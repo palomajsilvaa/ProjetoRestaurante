@@ -3,6 +3,9 @@ package app;
 import cardapio.Lanche;
 import pedido.Pedido;
 import cardapio.LancheFactory;
+import cardapio.ComCheddar;
+import cardapio.ComBaconExtra;
+import cardapio.ItemCardapio;
 
 
 public class Main {
@@ -29,30 +32,41 @@ public class Main {
                     Pedido pedido = sistema.criarPedido(nomeCliente);
 
                     int opcaoLanche = menu.lerOpcaoLanche();
+                    ItemCardapio lanche = null;
 
                     if (opcaoLanche == 1) {
 
-                        pedido.adicionarItem(
-                                LancheFactory.xBurger()
-                        );
+                        lanche = LancheFactory.xBurger();
 
                     }
 
                     else if (opcaoLanche == 2) {
 
-                        pedido.adicionarItem(
-                                LancheFactory.xSalada()
-                        );
+                        lanche = LancheFactory.xSalada();
 
                     }
 
                     else if (opcaoLanche == 3) {
 
-                        pedido.adicionarItem(
-                                LancheFactory.xBacon()
-                        );
+                        lanche = LancheFactory.xBacon();
 
                     }
+                    boolean cheddar = menu.desejaCheddar();
+
+                    boolean baconExtra = menu.desejaBaconExtra();
+
+                    if (cheddar) {
+
+                        lanche = new ComCheddar(lanche);
+
+                    }
+
+                    if (baconExtra) {
+
+                        lanche = new ComBaconExtra(lanche);
+
+                    }
+                    pedido.adicionarItem(lanche);
 
                     System.out.println(
                             "Pedido criado com número: "
@@ -72,10 +86,10 @@ public class Main {
                                         p.getNomeCliente()
                         );
 
-                        for (Lanche l : p.getItens()) {
+                        for (ItemCardapio l : p.getItens()) {
 
                             System.out.println(
-                                    l.getNome() +
+                                    l.getDescricao() +
                                             " - R$ " +
                                             l.getPreco()
                             );

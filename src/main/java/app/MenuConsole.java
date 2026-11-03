@@ -62,4 +62,23 @@ public class MenuConsole {
             return -1;
         }
     }
+
+    public boolean desejaCheddar() {
+
+        System.out.print("Deseja cheddar? (s/n): ");
+
+        String resposta = sc.nextLine();
+
+        return resposta.equalsIgnoreCase("s");
+    }
+
+
+    public boolean desejaBaconExtra() {
+
+        System.out.print("Deseja bacon extra? (s/n): ");
+
+        String resposta = sc.nextLine();
+
+        return resposta.equalsIgnoreCase("s");
+    }
 }

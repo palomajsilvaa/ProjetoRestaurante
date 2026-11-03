@@ -1,13 +1,13 @@
 package pedido;
 
-import cardapio.Lanche;
+import cardapio.ItemCardapio;
 import java.util.ArrayList;
 
 public class Pedido {
 
     private int numero;
     private String nomeCliente;
-    private ArrayList<Lanche> itens = new ArrayList<>();
+    private ArrayList<ItemCardapio> itens = new ArrayList<>();
 
     public Pedido(int numero, String nomeCliente) {
 
@@ -33,13 +33,13 @@ public class Pedido {
         this.nomeCliente = nomeCliente;
     }
 
-    public void adicionarItem(Lanche lanche) {
+    public void adicionarItem(ItemCardapio lanche) {
 
         itens.add(lanche);
 
     }
 
-    public ArrayList<Lanche> getItens() {
+    public ArrayList<ItemCardapio> getItens() {
 
         return itens;
 
@@ -49,7 +49,7 @@ public class Pedido {
 
         double total = 0;
 
-        for (Lanche lanche : itens) {
+        for (ItemCardapio lanche : itens) {
 
             total += lanche.getPreco();
 
