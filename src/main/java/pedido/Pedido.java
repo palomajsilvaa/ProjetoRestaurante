@@ -39,6 +39,16 @@ public class Pedido {
 
     }
 
+    public void removerItem(int indice) {
+
+        if (indice >= 0 && indice < itens.size()) {
+
+            itens.remove(indice);
+
+        }
+
+    }
+
     public ArrayList<ItemCardapio> getItens() {
 
         return itens;

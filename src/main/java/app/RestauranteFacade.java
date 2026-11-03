@@ -42,4 +42,10 @@ public class RestauranteFacade {
         gerenciador.cancelarPedido(numero);
 
     }
+
+    public int contarCombinacoesDiferentes() {
+
+        return gerenciador.contarCombinacoesDiferentes();
+
+    }
 }

@@ -128,10 +128,17 @@ public class Main {
                 case 3:
 
                     double totalDia = sistema.calcularTotalDoDia();
+                    int combinacoes =
+                            sistema.contarCombinacoesDiferentes();
 
                     System.out.println(
                             "Total vendido no dia: R$ "
                                     + totalDia
+                    );
+
+                    System.out.println(
+                            "Combinações diferentes: "
+                                    + combinacoes
                     );
 
                     break;

@@ -2,6 +2,7 @@ package pedido;
 
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.HashSet;
 
 public class GerenciadorPedidos {
 
@@ -47,5 +48,23 @@ public class GerenciadorPedidos {
 
         pedidos.remove(numero);
 
+    }
+    public int contarCombinacoesDiferentes() {
+
+        HashSet<String> combinacoes = new HashSet<>();
+
+        for (Pedido pedido : pedidos.values()) {
+
+            for (var item : pedido.getItens()) {
+
+                combinacoes.add(
+                        item.getDescricao()
+                );
+
+            }
+
+        }
+
+        return combinacoes.size();
     }
 }
