@@ -13,6 +13,7 @@ public class MenuConsole {
         System.out.println("2 - Listar pedidos do dia");
         System.out.println("3 - Fechar restaurante");
         System.out.println("4 - Cancelar pedido");
+        System.out.println("5 - Remover item de pedido");
         System.out.println("0 - Sair");
         System.out.print("Escolha: ");
     }
@@ -113,6 +114,14 @@ public class MenuConsole {
     public int lerNumeroPedido() {
 
         System.out.print("Número do pedido: ");
+
+        return sc.nextInt();
+
+    }
+
+    public int lerIndiceItem() {
+
+        System.out.print("Número do item para remover: ");
 
         return sc.nextInt();
 

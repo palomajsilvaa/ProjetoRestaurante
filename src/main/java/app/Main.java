@@ -153,6 +153,53 @@ public class Main {
 
                     break;
 
+                case 5:
+
+                    int numeroPedidoRemover =
+                            menu.lerNumeroPedido();
+
+                    Pedido pedidoRemover =
+                            sistema.buscarPedido(
+                                    numeroPedidoRemover
+                            );
+
+                    if (pedidoRemover != null) {
+
+                        int contador = 0;
+
+                        for (ItemCardapio item :
+                                pedidoRemover.getItens()) {
+
+                            System.out.println(
+                                    contador + " - "
+                                            + item.getDescricao()
+                            );
+
+                            contador++;
+                        }
+
+                        int indice =
+                                menu.lerIndiceItem();
+
+                        sistema.removerItemPedido(
+                                numeroPedidoRemover,
+                                indice
+                        );
+
+                        System.out.println(
+                                "Item removido."
+                        );
+
+                    } else {
+
+                        System.out.println(
+                                "Pedido não encontrado."
+                        );
+
+                    }
+
+                    break;
+
                 case 0:
 
                     System.out.println("Encerrando sistema...");

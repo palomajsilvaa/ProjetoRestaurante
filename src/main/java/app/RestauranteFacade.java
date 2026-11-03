@@ -48,4 +48,25 @@ public class RestauranteFacade {
         return gerenciador.contarCombinacoesDiferentes();
 
     }
+
+    public Pedido buscarPedido(int numero) {
+
+        return gerenciador.buscarPedido(numero);
+
+    }
+
+    public void removerItemPedido(
+            int numeroPedido,
+            int indiceItem
+    ) {
+
+        Pedido pedido =
+                gerenciador.buscarPedido(numeroPedido);
+
+        if (pedido != null) {
+
+            pedido.removerItem(indiceItem);
+
+        }
+    }
 }
